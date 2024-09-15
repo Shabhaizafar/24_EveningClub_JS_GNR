@@ -149,4 +149,21 @@ Addition(1,2,3,4,5,6,7,8,9,10); //55
 ///////////////////////////////////////////////////
 
 
-// explaination reduce method with Example.
+// explaination reduce method with Example.\
+
+
+
+
+/*
+https://igorgo.nl/assets/articles/js-arrays-cheatsheet/js-arrays-aggregated.webp
+
+https://pbs.twimg.com/media/Fr9jZ1TWAAA2cr2.jpg
+
+
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0UFDXrdSxjLSVIMBLhot5mcuQv89LobZDCA&s
+
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_96A_7Sn1Zxq-UGTO9SUvYFPy2LRUN6Q0sg&s
+
+
+
+*/
