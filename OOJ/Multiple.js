@@ -17,7 +17,7 @@ const AdProvider = (superclass) => class extends superclass {
 // Our helper class that will make things look better
 class MixinBuilder {
     constructor(superclass) {
-        this.superclass = superclass; //{}   empty class
+        this.superclass = superclass;//undefined //{}   empty class
     }
     //method
     with(...mixins) {
@@ -31,6 +31,19 @@ class Facebook extends mix(BaseClass).with(SocialNetwork, AdProvider) {}
 const fb = new Facebook();
 fb.foo();
 fb.bar();
+
+
+
+
+
+var Arr =[1,2,3,4,5,6,7,78];
+
+Arr.reduce(
+    //13            2
+    (currentvalue,nextvalue)=>{
+
+    },12
+);
 
 
 

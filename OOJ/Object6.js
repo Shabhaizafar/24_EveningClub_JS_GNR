@@ -1,12 +1,12 @@
 
 
 
-// //Function Constructor : 
-// function Person(fname,lname,Age){
-//     this.Firstname = fname;
-//     this.Lastname = lname;
-//     this.Age = Age;
-// }
+//Function Constructor : 
+function Person(fname,lname,Age){
+    this.Firstname = fname;
+    this.Lastname = lname;
+    this.Age = Age;
+}
 
 
 
