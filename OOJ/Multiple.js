@@ -48,3 +48,34 @@ Arr.reduce(
 
 
 
+
+
+//////////////
+/*
+Mixin and Class Inheritance Questions:
+Modify the MixinBuilder class so that it also accepts an array of static methods and applies them to the target class.
+//-----------------
+Add a mixin NotificationMixin that has methods sendNotification() and scheduleNotification(). Combine this with the Facebook class and test the methods.
+//-----------------
+
+Write a program that uses the MixinBuilder to combine multiple mixins dynamically based on user input.
+//-----------------
+
+Create a class Instagram that uses both SocialNetwork and AdProvider mixins, but implement a custom bar() method that overrides the AdProvider mixin's bar() behavior.
+//-----------------
+
+How would you modify the Facebook class to ensure that it uses different methods from each mixin, without any method name conflicts?
+//-----------------
+
+Create a LoggerMixin that adds a log() method to any class. Use this mixin with the Facebook class and log messages whenever foo() or bar() is called.
+//-----------------
+
+Implement a scenario where one mixin depends on methods from another mixin. Demonstrate how you would resolve the dependency using MixinBuilder.
+//-----------------
+
+Write a program that chains two mixins in a single class but ensures they can be turned on or off dynamically.
+//-----------------
+
+Create a base class Vehicle and use mixins to add specific behaviors like DriveMixin for cars and FlyMixin for planes. Then, create a FlyingCar class using both mixins.
+//-----------------
+*/

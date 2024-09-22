@@ -59,7 +59,7 @@ obj1.bioData.call(obj2);
 
 console.log("\n");
 // apply 
-obj1.bioData.apply(obj1,["Cricket","Football"]);
+obj1.bioData.apply(obj1,["Cricket","Football","wert"]);
 obj1.bioData.apply(obj2,["1","2"]);
 
 console.log("\n");
