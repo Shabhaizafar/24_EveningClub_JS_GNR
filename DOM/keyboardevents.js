@@ -50,14 +50,14 @@ var counter = 0;
 
 
 //Console Screen :
-body.onkeydown = function(event){
-    if(counter==div.length)
-        return ;
-    if(event.key==div[counter]){
-        console.log(event.key,div[counter]);
-        counter++; 
-    }
-}
+// body.onkeydown = function(event){
+//     if(counter==div.length)
+//         return ;
+//     if(event.key==div[counter]){
+//         console.log(event.key,div[counter]);
+//         counter++; 
+//     }
+// }
 
 
 //////////////////////////////////////
