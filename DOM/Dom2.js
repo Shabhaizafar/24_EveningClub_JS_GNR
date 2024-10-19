@@ -7,8 +7,14 @@ btn.onclick =function (){
     // console.log(img.attributes['src']);
     // console.log(btn.innerHTML);
 
-
-    img.attributes[0].value = "on.png";
-    btn.innerHTML = "OFF";
+    if(img.attributes[0].value=='bulb.png')
+    {
+        img.attributes[0].value = "on.png";
+        btn.innerHTML = "OFF";
+    }
+    else{
+        img.attributes[0].value = "bulb.png";
+        btn.innerHTML = "ON";
+    }
     
 }
