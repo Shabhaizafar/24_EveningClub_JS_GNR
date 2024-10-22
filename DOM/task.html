@@ -13,6 +13,8 @@
     align-items: center;
     height: 100vh;
     margin: 0;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
 .form-container {
@@ -41,6 +43,7 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -79,15 +82,18 @@ input[type="submit"]:hover {
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" ></textarea>
             </div>
-            <input type="submit" value="Send">
+            <input type="submit" value="Send" class="btn">
         </form>
     </div>
+    <table border="">
+        <tr>
+            <th>Sr No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+    </table>
 
-    <script>
-        document.body.onclick = function (event){
-            event.preventDefault();
-            console.log("wertyui");
-        }
-    </script>
+    <script src="Form.js"></script>
 </body>
 </html>
