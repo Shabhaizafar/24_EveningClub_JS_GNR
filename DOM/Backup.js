@@ -33,7 +33,6 @@ btn.onclick = function (){
 H1 : Name  (align)
 
 
-
 btn1 : click : increase font-size h1
 btn2 : click : decrease font-size h1
 */ 
