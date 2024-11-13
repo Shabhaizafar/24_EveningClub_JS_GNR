@@ -12,13 +12,40 @@ var AllOp = ['+',"-","*","/","%"];
 // div.addEventListener(event,function);
 
 div.addEventListener('click',function (event){
+    var op = '';
     if(event.target.tagName=="BUTTON"){
         if(event.target.innerHTML!='AC' && event.target.innerHTML !='DEL' && event.target.innerHTML!="="){
-            input.value +=event.target.innerHTML;
+            if(input.value[0]=='0'){
+                if(event.target.innerHTML=='00'){
+                    return;
+                }else if(event.target.innerHTML=='.'){
+                    if(op=='' && input.value.split('').includes('.')){
+                        return;
+                    }
+                    else{
+                        input.value +=event.target.innerHTML;
+                        return;    
+                    }
+                }
+            }
+            else if(event.target.innerHTML=='.'){
+                if(op=='' && input.value.split('').includes('.')){
+                    return;
+                }
+                else{
+                    input.value +=event.target.innerHTML;
+                    return;    
+                }
+            }
+            if(input.value[0]=='0' && input.value.length==1){
+                input.value =event.target.innerHTML;
+            }else{
+                input.value +=event.target.innerHTML;
+            }
         }else if(event.target.innerHTML=='='){
             var temp1 = '';
             var temp2 = '';
-            var op = ''
+          
             // console.log(input.value.split('').includes('+'));  //true 
             for (let i = 0; i < input.value.split('').length; i++) {
                 if(AllOp.includes(input.value.split('')[i])){
@@ -33,5 +60,19 @@ div.addEventListener('click',function (event){
                             break;
             }
         }
+        else if(event.target.innerHTML=='AC'){
+            input.value = "0";
+        }
+        else if(event.target.innerHTML=='DEL'){
+
+            input.value = input.value.slice(0,input.value.length-1);
+            if(input.value.length==0){
+                input.value = "0";
+            }
+        }
     }
 });
+
+
+// "Zafar".slice(0,4)
+//  0123 
