@@ -10,11 +10,31 @@ var AllOp = ['+',"-","*","/","%"];
 // console.log(document.querySelector('button').tagName);
 
 // div.addEventListener(event,function);
-
+var count=0;
 div.addEventListener('click',function (event){
-    var op = '';
+var op = '';
     if(event.target.tagName=="BUTTON"){
         if(event.target.innerHTML!='AC' && event.target.innerHTML !='DEL' && event.target.innerHTML!="="){
+            /16-11-2024/ 
+                // console.log(input.value.split('').includes('.'));  // dot 
+                if(AllOp.includes(event.target.innerHTML) && input.value[input.value.length-1]=='.'){
+                    input.value = input.value.slice(0,input.value.length-1)+event.target.innerHTML;
+                    return;
+                }
+                if(AllOp.includes(input.value[input.value.length-1])){
+                    op = input.value[input.value.length-1];
+                    count++;
+                    if(event.target.innerHTML=='.'){
+                        input.value =input.value+'0'+event.target.innerHTML;
+                        return;
+                    }
+                }
+                else if( count && input.value.split('').filter((a)=>{return a=='.'}).length==1){
+                    input.value +=event.target.innerHTML;
+                    return;
+                }
+                console.log(op);
+            /16-11-2024/ 
             if(input.value[0]=='0'){
                 if(event.target.innerHTML=='00'){
                     return;
