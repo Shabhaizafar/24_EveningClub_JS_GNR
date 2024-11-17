@@ -18,7 +18,7 @@
         }
         div{
             width: 400px;
-            height: 70%;
+            height: 75%;
             background-color: gray;
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -46,10 +46,18 @@
         button:hover{
             background-color: gainsboro;
         }
+        section{
+            height: 20px;
+            grid-column: 1/5;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
     <div>
+        <section class="outer">
+            
+        </section>
         <input type="text" readonly value="0">
         <button>AC</button>
         <button>DEL</button>
