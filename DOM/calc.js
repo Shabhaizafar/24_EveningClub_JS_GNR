@@ -1,41 +1,33 @@
 var div = document.querySelector('div');
 var input = document.querySelector('input');
 var AllOp = ['+',"-","*","/","%"];
-// div.onclick = function (){
-//     console.log("we");
-// }
-// div.onclick = function (){
-//     console.log("New");
-// }
-// console.log(document.querySelector('button').tagName);
-
-// div.addEventListener(event,function);
 var count=0;
 var flag = false;
+var flag2 = true;
+var temp1 = '';
+var temp2 = '';
+var temp3 = '';
 div.addEventListener('click',function (event){
 var op = '';
 var outerTag = document.querySelector('.outer');
+
     if(event.target.tagName=="BUTTON"){
         if(event.target.innerHTML!='AC' && event.target.innerHTML !='DEL' && event.target.innerHTML!="="){
-                /17-11-2024/ 
                 if(flag){
                     input.value = '';
                     flag = false;
                 }
                 if(AllOp.includes(event.target.innerHTML)){
                     if(outerTag.innerHTML==''){
-                        /switch/
                         outerTag.innerHTML = String(Number(outerTag.innerHTML)+ Number(input.value))+event.target.innerHTML;
                     }
                     else{
-                        /switch/
                         outerTag.innerHTML = String(Number(outerTag.innerText.slice(0,outerTag.innerText.length-1))+ Number(input.value))+event.target.innerHTML;
                     }
                     input.value =  outerTag.innerText.slice(0,outerTag.innerText.length-1);
                     flag = true;
                     return;
                 }
-                /17-11-2024/ 
                 if(AllOp.includes(event.target.innerHTML) && input.value[input.value.length-1]=='.'){
                     input.value = input.value.slice(0,input.value.length-1)+event.target.innerHTML;
                     return;
@@ -80,25 +72,31 @@ var outerTag = document.querySelector('.outer');
                 input.value +=event.target.innerHTML;
             }
         }else if(event.target.innerHTML=='='){
-            var temp1 = '';
-            var temp2 = '';
-          
-            // console.log(input.value.split('').includes('+'));  //true 
-            for (let i = 0; i < input.value.split('').length; i++) {
-                if(AllOp.includes(input.value.split('')[i])){
-                    var op = input.value.split('')[i];
-                    temp2 = input.value.split('').slice(i+1).join('');
-                    break;
+            if(flag2==true){
+                temp3 = input.value;
+                for (let i = 0; i < outerTag.innerText.split('').length; i++) {
+                    if(AllOp.includes(outerTag.innerText.split('')[i])){
+                        var op = outerTag.innerText.split('')[i];
+                        temp2 = input.value;
+                        break;
+                    }
+                    temp1+=outerTag.innerText.split('')[i]; 
                 }
-                temp1+=input.value.split('')[i]; 
+                outerTag.innerText +=input.value + "=";
+                switch(op){
+                    case '+' : input.value = (+temp1)+(+temp2);
+                                break;
+                }
+                flag2 = false;
             }
-            switch(op){
-                case '+' : input.value = (+temp1)+(+temp2);
-                            break;
+            else if(flag2==false){
+                outerTag.innerText =input.value+outerTag.innerText.slice(outerTag.innerText.length-2-temp3.length);
+                input.value=(+input.value) +(+temp3);
             }
         }
         else if(event.target.innerHTML=='AC'){
             input.value = "0";
+            outerTag.innerHTML = "";
         }
         else if(event.target.innerHTML=='DEL'){
 
@@ -116,3 +114,14 @@ var outerTag = document.querySelector('.outer');
 
 
 // console.log(Number(document.querySelector('section').innerText));
+// div.onclick = function (){
+//     console.log("we");
+// }
+// div.onclick = function (){
+//     console.log("New");
+// }
+// console.log(document.querySelector('button').tagName);
+
+// div.addEventListener(event,function);
+                    
+                      // console.log(input.value.split('').includes('+'));  //true 
