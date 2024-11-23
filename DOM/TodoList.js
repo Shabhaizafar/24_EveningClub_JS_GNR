@@ -8,6 +8,9 @@ addBtn.addEventListener('click',function(){
     newLi.innerHTML = `<span class="todo-text">${todoInput.value}</span>
         <div class="action-buttons">
           <button class="action-btn">
+            <span class="material-symbols-outlined">check_circle</span>
+          </button>
+          <button class="action-btn">
             <span class="material-icons">edit</span>
           </button>
           <button class="action-btn">
@@ -23,3 +26,18 @@ addBtn.addEventListener('click',function(){
         document.querySelector('section').style.display = 'none';
     }, 2000);
 });
+
+ul.addEventListener('click',function(event){
+  if(event.target.innerHTML=='check_circle'){
+    event.target.parentElement.parentElement.parentElement.children[0].classList.add('completed');
+  }else if(event.target.innerHTML=='delete'){
+      if(event.target.parentElement.parentElement.parentElement.children[0].classList.contains('completed')){
+        event.target.parentElement.parentElement.parentElement.remove();
+      }
+  }
+});
+
+
+// else if(event.target.innerHTML=='edit'){
+//   console.log(event.target.innerHTML);
+// }
