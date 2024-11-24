@@ -19,11 +19,11 @@ addBtn.addEventListener('click',function(){
         </div>`;
     ul.appendChild(newLi);
     todoInput.value = "";
-    // document.querySelector('section').style.visibility = 'visible';
-    document.querySelector('section').style.display = 'block';
+    document.querySelector('section').style.visibility = 'visible';
+    // document.querySelector('section').style.display = 'block';
 
     setTimeout(() => {
-        document.querySelector('section').style.display = 'none';
+        document.querySelector('section').style.visibility = 'hidden';
     }, 2000);
 });
 
