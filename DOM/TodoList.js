@@ -35,9 +35,12 @@ ul.addEventListener('click',function(event){
         event.target.parentElement.parentElement.parentElement.remove();
       }
   }
+  else if(event.target.innerHTML=='edit'){
+    if(!event.target.parentElement.parentElement.parentElement.children[0].classList.contains('completed')){
+      var newTxt = prompt("Enter New Task : ");
+      if(newTxt){
+      event.target.parentElement.parentElement.parentElement.children[0].innerHTML = newTxt;
+    }
+  }
+  }
 });
-
-
-// else if(event.target.innerHTML=='edit'){
-//   console.log(event.target.innerHTML);
-// }
