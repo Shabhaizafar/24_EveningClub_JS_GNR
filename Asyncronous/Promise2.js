@@ -5,9 +5,10 @@ btn.addEventListener('click',function(){
         msg : "Promise Successfully Execute!!!",
         status : 200
     };
+    
     var error = {
         msg : "Somthing Wrong !!!"
-    }
+    };
 
     var myPromise = new Promise(function(Success,reject){
         if(obj1.status == 200){
