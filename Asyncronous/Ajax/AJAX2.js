@@ -18,7 +18,9 @@ btn2.onclick = function(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function (data){
         // document.querySelector('#dv2').innerHTML = `<pre>${data.target.response}</pre>`;       
-        // console.log(data.target);
+            //   Object
+        console.log(typeof JSON.parse(data.target.response));    
+
         if(data.target.response.includes(msg)){
             document.querySelector('#dv2').innerHTML = `<pre>Data Exist</pre>`;
         }else{
