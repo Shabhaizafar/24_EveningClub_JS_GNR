@@ -29,19 +29,38 @@
             border: none;
             border-radius: 10px;
         }
-        div{
+        section:first-child{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        section:nth-child(2){
             width: 100%;
             flex-grow: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            overflow: hidden;
+        }
+        div{
             background-color: darkslategrey;
             overflow: auto;
             color: white;
+            overflow: auto;
         }
     </style>
 </head>
 <body>
-    <button>Click Here</button>
-    <div></div>
+    <section>
+        <button id="btn1">Click Here</button>
+        <button id="btn2">Click Here</button>
+    </section>
+    <section>
+        <div id="dv1"></div>
+        <div id="dv2"></div>
+    </section>
 
-    <script src="AJAX1.js"></script>
+    <!-- <script src="AJAX1.js"></script> -->
+     <script src="AJAX2.js"></script>
 </body>
 </html>
