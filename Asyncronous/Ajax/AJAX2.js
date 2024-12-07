@@ -18,15 +18,14 @@ btn2.onclick = function(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function (data){
         // document.querySelector('#dv2').innerHTML = `<pre>${data.target.response}</pre>`;       
-            //   Object
-        console.log(typeof JSON.parse(data.target.response));    
-
-        if(data.target.response.includes(msg)){
-            document.querySelector('#dv2').innerHTML = `<pre>Data Exist</pre>`;
-        }else{
-            document.querySelector('#dv2').innerHTML = `<pre>Data Doesn't Exist!!</pre>`;
-
-        }
+    //   Object
+                
+    console.log(typeof JSON.parse(data.target.response));    
+    if(data.target.response.includes(msg)){
+        document.querySelector('#dv2').innerHTML = `<pre>Data Exist</pre>`;
+    }else{
+        document.querySelector('#dv2').innerHTML = `<pre>Data Doesn't Exist!!</pre>`;
+    }
     }
     xhttp.open('GET',"example_1.json");
     xhttp.send();
