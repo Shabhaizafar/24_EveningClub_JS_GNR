@@ -1,4 +1,7 @@
 const btn = document.querySelector("button");
+const table = document.createElement('table');
+document.querySelector('div').appendChild(table);
+
 
 btn.onclick = function (event){
     event.preventDefault();
@@ -10,7 +13,17 @@ btn.onclick = function (event){
         for (const key in obj) {
                 // console.log(key,obj[key].name);
             if(document.querySelector('input').value == obj[key].name){
-                console.log(obj[key]);
+                for (const key2 in obj[key]) {
+                    var tr = document.createElement('tr');
+                    var td = document.createElement('td');
+                    var th = document.createElement('th');
+                    th.append(key2);
+                    td.append(obj[key][key2]);
+                    tr.appendChild(th);
+                    tr.appendChild(td);
+                    table.appendChild(tr);
+                }
+                table.style.visibility = "visible";
                 temp++;
             }
         }
