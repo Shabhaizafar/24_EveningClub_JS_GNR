@@ -31,7 +31,7 @@ btn.onclick = function (event){
             console.log("Exist");
         }else{
             console.log("Doesn't Exist");
-        }
+        } 
     }
     xhttp.open("GET","Data.json");
     xhttp.send();
