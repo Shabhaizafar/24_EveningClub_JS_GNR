@@ -13,22 +13,26 @@
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Name</th>
-        </tr>
-    </table>
-
+    
+    <button>
+        Validate
+    </button>
     <script>
-        const table = document.querySelector("table");
-        const tr = document.createElement('tr');
-        var td = document.createElement('td');
-        
-        td.innerHTML = localStorage.getItem('fname');
-        tr.appendChild(td);
-        table.append(tr);
+        document.querySelector('button').addEventListener('click',function(){
+            
+            const xhttp = new XMLHttpRequest();
 
-
+            xhttp.open("GET","Data.json");
+            xhttp.onload = function(data){
+                var tempobj = JSON.parse(data.target.response);
+                for (const key in tempobj) {
+                    if(localStorage.getItem("fname")==tempobj[key].name){
+                        console.log("Data Exist");
+                    }
+                }
+            }
+            xhttp.send();
+        });
     </script>
 </body>
 </html>
