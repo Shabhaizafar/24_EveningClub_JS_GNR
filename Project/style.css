@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*home-Page video */
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+#my-video{
+    width: 100vw;
+}
+button{
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
