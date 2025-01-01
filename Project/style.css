@@ -3,6 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "BUGATTI";
+    src: url('/assets/font/Cocogoose\ Condensed\ trial.ttf');
+}
 /*home-Page video */
 body{
     overflow: hidden;
@@ -10,9 +14,56 @@ body{
 }
 #my-video{
     width: 100vw;
-}
-button{
     position: absolute;
     top: 0px;
-    z-index: 10;
 }
+
+/*Start of .home-head */
+.home-head{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 60px;
+    z-index: 1;
+    position: fixed;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 0px 10%;
+}
+.home-head div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+.home-head div.logo{
+    grid-column: 2;
+}
+div.logo img{
+    width: 33%;
+}
+.home-head div.menu{
+    grid-column: 3;
+    justify-content: end;
+}
+div.menu button{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+/*End of .home-head */
+
+/* start of Home-content */
+.home-content{
+    z-index: 1;
+    position: fixed;
+    color: white;
+    font-family: "BUGATTI";
+}
+/* end of Home-content */
+/* 
+
+
+BUGATTI FONT
+MENU LOGO
+
+*/
