@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Down Arrow</title>
+  <style>
+    body {
+      background-color: #000; /* Black background for contrast */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    svg polyline {
+      stroke: white;
+      stroke-width: 3;
+      fill: none;
+      opacity: 0;
+      animation: scrollArrow 2s infinite ease-in-out;
+    }
+
+    svg polyline:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    svg polyline:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    svg polyline:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes scrollArrow {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+</body>
+</html>
+
