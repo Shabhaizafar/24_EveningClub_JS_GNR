@@ -14,7 +14,16 @@
         </div>
         <div class="menu">
             <button>
-                Z
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <g fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square">
+                      <line x1="10" y1="12" x2="30" y2="12"/> <!-- Top Line -->
+                      <line x1="15" y1="20" x2="30" y2="20"/> <!-- Middle Line -->
+                      <line x1="10" y1="28" x2="30" y2="28"/> <!-- Bottom Line -->
+                      <line x1="10" y1="12" x2="10" y2="14"/> <!-- Vertical Block -->
+                      <line x1="15" y1="18" x2="15" y2="22"/> <!-- Vertical Block -->
+                      <line x1="10" y1="26" x2="10" y2="28"/> <!-- Vertical Block -->
+                    </g>
+                  </svg>
             </button>
         </div>
     </header>
@@ -23,7 +32,7 @@
         <h1>A RECORD-BREAKING FORCE OF NATURE</h1>
         <p class="second">Setting a new benchmark at 453.91 km/h. A triumph of passion, precision, and performance.</p>
         <a href="#">Watch the record</a>
-        <div>
+        <div class="scrolling-svg">
             <svg width="25px" height="29px" viewBox="0 0 25 29" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g stroke="#FFFFFF" stroke-width="3">
@@ -33,9 +42,34 @@
                   </g>
                 </g>
               </svg>
+              <span style="display: inline-block;margin-top: 4px;">SCROLL</span>
         </div>
-        <span style="display: inline-block;margin-top: 4px;">SCROLL</span>
     </section>
+    <footer>
+        <div class="foot">
+            <section>ENGLISH</section>
+            <section>
+                <div><img src="assets/logo.png" alt=""></div>
+            </section>
+            <section>AUDIO OFF</section>
+        </div>
+        <div class="foot">
+            <section></section>
+            <section>
+                <aside>
+                    <div><img src="assets/fc.svg" alt=""></div>
+                    <span>21.47 - 25.19 1/100 km</span>
+                </aside>
+                <aside>
+                    <div><img src="assets/c02.svg" alt=""></div>
+                    <span>486.72 - 571.63 g/km</span>
+                </aside>
+            </section>
+            <section>
+                <div><img src="assets/arrow-1.svg" alt=""></div>
+            </section>
+        </div>
+    </footer>
     <video id="my-video" src="assets/videos/Homepage/BUGATTI_Mistral_World_Record_Teaser_16_9.mp4" muted="true"  autoplay ></video>
     <script>
         setInterval(() => {

@@ -59,10 +59,12 @@ div.menu button{
     color: white;
     font-family: "calibri";
     text-align: center;
-    top: calc(50% - 185px);
+    top: 140px;
     left: calc(40% - 24%);
+    height: calc(100vh - 246px);
     /* 370  48%*/
     margin: 0px 10%;
+
 }
 .home-content h1{
     font-size: 3.5em;
@@ -134,11 +136,96 @@ svg polyline {
       transform: translateY(10px);
     }
   }
+.scrolling-svg{
+    display: flex;
+    width: 140px !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 70px);
+}
 /* end of Home-content */
+/*  */
+footer{
+    z-index: 1;
+    position: fixed;
+    width: 80%;
+    bottom: 0px;
+    left: 10%;
+    display: grid;
+    gap: 10px;
+}
+footer>div{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    padding: 12px 4%;
+    gap: 10px;
+    color: white;
+    font-family: calibri;
+    backdrop-filter: blur(10px);
+    background: hsla(0, 0%, 100%, .08);
+    box-shadow: 0 0 0 rgba(0, 0, 0, .6);
+}
+footer>div>section:last-child{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+footer>div>section:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+footer>div>section>div{
+    width: 24px;
+    height: 24px;
+}
+footer>div>section>div>img{
+    width: 100%;
+}
+footer div section aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div section aside div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer>div>section:last-child div{
+    rotate: -90deg;
+    width: 10px;
+}
+
+footer>div:last-child>section:nth-child(2){
+    justify-content: space-around;
+}
+/*  */
+
 /* 
-
-
-BUGATTI FONT
-MENU LOGO
-
+<footer>
+        <div class="foot">
+            <section>ENGLISH</section>
+            <section>Z</section>
+            <section>AUDIO OFF</section>
+        </div>
+        <div class="foot">
+            <section></section>
+            <section>
+                <aside>
+                    <span>Z</span>
+                    <span>21.47 - 25.19 1/100 km</span>
+                </aside>
+                <aside>
+                    <span>Z</span>
+                    <span>486.72 - 571.63 g/km</span>
+                </aside>
+            </section>
+            <section>
+                <span>Z</span>
+            </section>
+        </div>
+    </footer>
 */
